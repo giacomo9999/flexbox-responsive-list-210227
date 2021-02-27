@@ -15,11 +15,27 @@ html {
   max-width: 960px;
   margin: 50px auto 0;
   padding: 20px;
+  font-family: Oswald, sans-serif;
 }
 
 .feature {
   padding-top: 30px;
   padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.feature-image {
+  width: 55%;
+}
+
+.feature-description {
+  width: 40%;
+}
+
+.reverse {
+  flex-direction: row-reverse;
 }
 
 .feature:not(:last-of-type) {
@@ -34,10 +50,21 @@ h2 {
 p {
   margin-bottom: 20px;
   font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5rem;
 }
 
 @media screen and (max-width: 750px) {
   h2 {
     text-align: center;
+  }
+  .feature {
+    flex-direction: column-reverse;
+  }
+  .feature-image {
+    width: 100%;
+  }
+  .feature-description {
+    width: 100%;
   }
 }
